@@ -1,0 +1,5 @@
+#!/bin/bash
+
+#This is chapter 24 example
+
+echo 'hello world' 

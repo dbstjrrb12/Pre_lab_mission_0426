@@ -1,0 +1,39 @@
+#!/bin/bash
+
+#This is chapter 26 example 
+
+TITLE="Systeme Information Report for $HOSTNAME"
+TIMESTAMP="Generated $CURRENT_TIME, by $USER"
+
+report_current_date(){
+	date="$(date +"%x")"
+	echo "current date is $date"
+	return
+}
+
+report_current_time(){
+	time="$(date +"%r")"
+	echo "current time is $time"
+	return
+}
+
+report_country_info(){
+	country="$(date +"%Z")"
+	echo "This is $country time"
+	return
+}
+
+cat << _EOF_
+<html>
+	<head>
+		<title>$TITLE</title>
+	</head>
+	<body>
+		<h1>$TITLE</h1>
+		<p>$TIMESTAMP</p>
+		$(report_current_date)
+		$(report_current_time)
+		$(report_country_info)
+	</body>
+</html>
+_EOF_

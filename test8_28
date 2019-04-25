@@ -1,0 +1,5 @@
+#!/bin/bash
+
+read -e -p  "What is your age?" -i $USER
+echo "You answered: '$REPLY'"
+

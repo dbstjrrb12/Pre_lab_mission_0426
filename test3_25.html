@@ -1,0 +1,19 @@
+#!/bin/bash
+
+#This is chapter 25 example 
+
+TITLE="Systeme Information Report for $HOSTNAME"
+CURRENT_TIME="$(date +"%x %r %Z")"
+TIMESTAMP="Generated $CURRENT_TIME, by $USER"
+
+cat << _EOF_
+<html>
+	<head>
+		<title>$TITLE</title>
+	</head>
+	<body>
+		<h1>$TITLE</h1>
+		<p>$TIMESTAMP</p>
+	</body>
+</html>
+_EOF_
